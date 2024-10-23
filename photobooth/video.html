@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BoogieTown Festival Bands</title>
+  
+  <!-- Include your CSS -->
+  <link rel="stylesheet" href="bt-stylesheet-vid.css">
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Add inline styles for demonstration -->
+  <style>
+    /* Fixed size for the main image container */
+    .image-gallery img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* Thumbnail container wraps automatically into new rows */
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping to a new line */
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    /* Style individual thumbnail images */
+    .thumbnails img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="course-title">BOOGIETOWN FESTIVAL</p>
+
+  <!-- Main image gallery -->
+  <div class="image-gallery">
+   <!--<video src="https://youtu.be/_UQbT56Mkz4?feature=shared" alt="BoggieTown">-->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_UQbT56Mkz4?si=Tvvs760yeQ1w3BRP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <!-- Thumbnails -->
+  <ul class="thumbnails">
+    <li>
+      <a href="https://youtu.be/_UQbT56Mkz4?feature=shared"><video src="https://youtu.be/_UQbT56Mkz4?feature=shared" alt="Boy George"></a>
+    </li>
+    <li>
+      <a href="bananarama.jpg"><img src="bananarama.jpg" alt="Bananarama"></a>
+    </li>
+    <li>
+      <a href="lisastandsfield.jpg"><img src="lisastandsfield.jpg" alt="Lisa Standsfield"></a>
+    </li>
+    <li>
+      <a href="wet-wet-wet-go-west-2024.png"><img src="wet-wet-wet-go-west-2024.png" alt="Wet Wet Wet"></a>
+    </li>
+    <li>
+      <a href="soul-2-soul.jpg"><img src="soul-2-soul.jpg" alt="Soul2Soul"></a>
+    </li>
+    <li>
+      <a href="ABC.jpg"><img src="ABC.jpg" alt="ABC"></a>
+    </li>
+    <li>
+      <a href="the-jacksons.jpg"><img src="the-jacksons.jpg" alt="The Jacksons"></a>
+    </li>
+    <li>
+      <a href="heather-amall.jpg"><img src="heather-amall.jpg" alt="Heather Small"></a>
+    </li>
+  </ul>
+
+  <!-- jQuery Script to handle thumbnail clicks -->
+  <script>
+    $(document).ready(function() {
+      // Handle click event on thumbnails
+      $('.thumbnails a').click(function(e) {
+        e.preventDefault(); // Prevent the default link behavior
+        // Update the main image with the clicked thumbnail's href
+        $('.image-gallery img').attr('src', $(this).attr('href'));
+      });
+    });
+  </script>
+  
+</body>
+</html>
